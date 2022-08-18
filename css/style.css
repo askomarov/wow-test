@@ -211,6 +211,10 @@ button {
   -webkit-appearance: none;
 }
 
+.rt-input:hover, .rt-input:focus, .rt-input:focus-within, .rt-input:focus-visible {
+  background-color: #ffffff;
+}
+
 @media (min-width: 767px) {
   .rt-input {
     border-radius: 14px;
@@ -571,8 +575,6 @@ button {
 .promo {
   padding-top: 88px;
   padding-bottom: 44px;
-  --spin-time: 20s;
-  overflow: hidden;
 }
 
 .promo__wrapper {
@@ -588,6 +590,7 @@ button {
 }
 .promo__image-wrapper {
   display: none;
+  --spin-time: 100s;
 }
 
 @media (min-width: 670px) {
