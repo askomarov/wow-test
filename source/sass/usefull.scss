@@ -1,0 +1,28 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+
+.w-text {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+  color: $text-color;
+}
+.text-green {
+  color: $primary-color;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.y-hint-text {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 25px;
+}

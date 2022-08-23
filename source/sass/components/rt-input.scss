@@ -1,0 +1,47 @@
+.rt-input {
+  -webkit-appearance: none;
+  border: 0;
+  font-family: $font-family-roboto;
+  outline: 0;
+  border-radius: 10px;
+  padding: 5px 15px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  color: $text-color;
+
+  &::placeholder {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    color: #a2a2a2;
+  }
+
+  -moz-appearance: textfield;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-within,
+  &:focus-visible {
+    background-color: $color-white;
+  }
+
+  @media (min-width: $width-tablet) {
+    border-radius: 14px;
+    font-size: 16px;
+    line-height: 21px;
+    padding: 10px 20px;
+  }
+}
+
+.rt-input--textarea {
+  resize: none;
+}

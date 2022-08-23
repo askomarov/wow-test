@@ -1,0 +1,39 @@
+.users-wrap {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  align-items: center;
+  gap: 12px;
+}
+.users-wrap__our-user-list {
+}
+.our-user-list {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+}
+.our-user-list__item {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:not(:first-child) {
+    margin-right: -17px;
+  }
+}
+
+.users-wrap__subtext {
+  font-family: $font-family-roboto;
+  max-width: 250px;
+
+  @media (min-width: $width-desktop) {
+    max-width: initial;
+  }
+}
+.users-wrap__text-link {
+  &:hover {
+    text-decoration: underline;
+  }
+}

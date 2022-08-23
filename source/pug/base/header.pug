@@ -1,0 +1,41 @@
+include ./logo
+
+mixin header(headerMods, currentPage)
+  -
+    var headerLinks = [
+      {
+        href: "",
+        text: "Mobile Top Up",
+      },
+      {
+        href: "#",
+        text: "About"
+      },
+      {
+        href: "#",
+        text: "Rate"
+      },
+      {
+        href: "#",
+        text: "Help",
+      },
+    ]
+
+  header.header(class=headerMods)
+    .header__wrapper.container
+      .header__start
+        a(href="#").header__logo
+          img(src="img/icon-logo.svg" width="40" height="40" alt="some desctr text")
+          span.header__logo-text Global
+      .header__middle
+        nav.header__nav.nav
+          button(type="button" aria-expanded="false").nav__toggle
+            span.nav__toggle-icon
+          ul.nav__wrapper
+            each link, index in headerLinks
+              li.nav__item
+                if(currentPage === index)
+                  a.nav__item-link.nav__item-link--active.link=link.text
+                else
+                  a.nav__item-link.nav__item-link(href=link.href)=link.text
+      a(href="").header__sing-up-btn.main-btn Sign Up

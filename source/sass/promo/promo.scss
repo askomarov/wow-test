@@ -1,0 +1,139 @@
+.promo {
+  padding-top: 88px;
+  padding-bottom: 44px;
+}
+.promo__wrapper {
+  display: grid;
+  position: relative;
+  z-index: 1;
+
+  @media (min-width: $width-tablet) {
+    grid-template-columns: 597px 1fr;
+  }
+}
+.promo__image-wrapper {
+  display: none;
+  --spin-time: 100s;
+
+  @media (min-width: 670px) {
+    display: block;
+    grid-column: 2/3;
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    top: 31%;
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 230px;
+      left: calc(50% + 3px);
+      bottom: 11px;
+      transform: translateX(-50%);
+
+      aspect-ratio: 1/1;
+      height: auto;
+      background-color: $primary-color;
+      border-radius: 50%;
+    }
+  }
+
+  @media (min-width: $width-tablet) {
+    right: -176px;
+    top: 87px;
+    &::after {
+      width: 280px;
+      left: calc(50% + 3px);
+      bottom: 36%;
+      transform: translateX(-50%);
+
+      aspect-ratio: 1/1;
+      height: auto;
+      background-color: $primary-color;
+      border-radius: 50%;
+    }
+  }
+}
+.promo__orbit {
+  position: absolute;
+  z-index: -1;
+  top: -80%;
+  left: calc(50% - 2px);
+  transform: translateX(-50%);
+  animation: base-rotate var(--spin-time, 36s) linear var(--delay, 0s) infinite forwards;
+
+  @media (min-width: $width-tablet) {
+    top: -34px;
+  }
+}
+.promo__img-girl {
+  // display: none;
+  width: 270px;
+  height: auto;
+  max-width: initial;
+  @media (min-width: $width-tablet) {
+    width: 836px;
+  }
+}
+.promo__scene {
+}
+.animate {
+}
+.animate__animated {
+}
+
+.promo__content {
+  max-width: 474px;
+  margin-right: auto;
+}
+.promo__text-content {
+  grid-column: 1/2;
+  position: relative;
+}
+.promo__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  line-height: 133%;
+  margin-bottom: 15px;
+
+  @media (min-width: $width-tablet) {
+    font-size: 3rem;
+  }
+}
+
+.promo__text {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 173%;
+  margin-bottom: 29px;
+  max-width: 370px;
+  @media (min-width: $width-tablet-h) {
+    max-width: initial;
+  }
+}
+
+.promo__cta-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 50px;
+  border-radius: 30px;
+}
+.promo__search-form {
+  margin-bottom: 40px;
+}
+
+.promo__users-wrap {
+}
+
+@keyframes base-rotate {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}

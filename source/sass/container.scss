@@ -1,0 +1,27 @@
+.container {
+  box-sizing: border-box;
+  max-width: $max-width;
+  padding: 0 10px;
+  margin: 0 auto;
+  position: relative;
+
+  @media (min-width: $width-mobile-h) {
+    padding: 0 20px;
+  }
+
+  @media (min-width: $width-tablet) {
+    padding: 0 50px;
+    min-width: $min-width;
+  }
+
+  @media (min-width: $width-tablet-h) {
+    padding: 0 30px;
+  }
+}
+
+.container--ex-tracker {
+  max-width: 988px;
+  @media (min-width: $width-tablet) {
+    padding: 0 44px;
+  }
+}

@@ -1,0 +1,40 @@
+doctype html
+
+include ../base/mixins
+include ../base/header
+include ../base/footer
+
+
+block variables
+
+html(lang="en")
+  head
+    title= title
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="description", content="Now Buy Your PIN or Top Up")
+
+    link(rel="apple-touch-icon", sizes="180x180", href="img/favicon/apple-touch-icon.png")
+    link(rel="icon", type="image/png", sizes="32x32", href="img/favicon/favicon-32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="img/favicon/favicon-16.png")
+    meta(name="msapplication-TileColor", content="#da532c")
+    meta(name="theme-color", content="#ffffff")
+
+
+    link(rel="stylesheet", href="css/style.min.css")
+
+  body
+    +sprite()
+    .wrapper(class=wrapperMods)
+      if (hasHeader)
+        +header(headerMods, currentPage)
+
+      block main
+
+      if (hasFooter)
+        +footer(footerMods)
+
+    block modals
+
+    script(src="js/main.min.js")

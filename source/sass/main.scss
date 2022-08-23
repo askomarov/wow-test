@@ -1,0 +1,16 @@
+.main {
+  position: relative;
+}
+.main-btn {
+  background-color: $primary-color;
+  color: $color-white;
+  border-radius: $btn-border-radius;
+  padding: 5px 8px;
+  &:hover {
+    background-color: #389b5f;
+  }
+}
+
+.main-text-colored {
+  color: $attention-color;
+}

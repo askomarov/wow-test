@@ -1,0 +1,10 @@
+mixin rtInputSearch(formid, id, name, plch, value, max, min)
+  form.rt-input-search(class!=attributes.class id=formid)
+    button(type="button").rt-input-search__btn-del
+      +icon("icon-close-small", 16, 16)
+    button(type="submit").rt-input-search__btn-submit
+      +icon("icon-search", 26, 26)
+    if (value)
+      input(type="search", id=id, name=name, maxlength=max, minlength=min placeholder=plch, value=value required autocomplete="off").rt-input.rt-input-search__input
+    else
+      input(type="search", id=id, name=name, maxlength=max, minlength=min,  placeholder=plch, required autocomplete="off").rt-input.rt-input-search__input

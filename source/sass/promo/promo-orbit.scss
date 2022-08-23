@@ -1,0 +1,48 @@
+.promo-orbit {
+  user-select: none;
+  pointer-events: none;
+  --orbit-size: 450px;
+  width: var(--orbit-size, 450px);
+  aspect-ratio: 1/1;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid #e8e8e8;
+}
+
+.promo-orbit__img {
+  position: absolute;
+  animation: anti-rotate var(--spin-time, 36s) linear var(--delay, 0s) infinite forwards;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation-play-state: paused;
+  }
+}
+.promo-orbit__img--1 {
+  top: 77px;
+  left: -12px;
+}
+.promo-orbit__img--2 {
+  top: -29px;
+  left: 48%;
+}
+.promo-orbit__img--3 {
+  right: -8px;
+  top: 87px;
+}
+.promo-orbit__img--4 {
+  right: -22px;
+  top: 247px;
+}
+.promo-orbit__img--5 {
+  top: 247px;
+  left: -22px;
+}
+
+@keyframes anti-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}

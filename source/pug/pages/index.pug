@@ -1,0 +1,47 @@
+extends ../base/layout
+
+block variables
+  - const title = "Wow test"
+  - const wrapperMods = ""
+  - const hasHeader = true
+  - const headerMods = ""
+  - const hasFooter = false
+  - const footerMods = ""
+  - const currentPage = 0
+  -
+    users = ['user-3', 'user-2', 'user-1',]
+
+block main
+  main.main
+    .container
+      .promo__image-wrapper
+        .promo__orbit.promo-orbit
+          +img('flags', 'flag-1', 'png', 80, 80, '' ).promo-orbit__img.promo-orbit__img--1
+          +img('flags', 'flag-2', 'png', 60, 60, '' ).promo-orbit__img.promo-orbit__img--2
+          +img('flags', 'flag-3-big', 'png', 70, 70, '' ).promo-orbit__img.promo-orbit__img--3
+          +img('flags', 'flag-3-small', 'png', 50, 50, '' ).promo-orbit__img.promo-orbit__img--4
+          +img('flags', 'flag-3-small', 'png', 50, 50, '' ).promo-orbit__img.promo-orbit__img--5
+        +img('flags', 'img-girl', 'png', 836, 557, 'wow girl' ).promo__img-girl
+      section.promo
+
+        .promo__wrapper
+          .promo__text-content
+            .promo__content
+              h1.promo__title Now Buy Your
+                br
+                |  PIN or
+                span.main-text-colored  Top&nbsp;Up
+                br
+                |  With Bank Transfer
+              p.promo__text We Make international calling simple, relible, and cheap basedon your unique calling behavior.
+              a(href="#").main-btn.promo__cta-btn Get Started
+            +rtInputSearch('search-form','id-search', 'id-search', 'Where do you want to call?', '', 12, 4).promo__search-form
+            .promo__users-wrap.users-wrap
+              ul.users-wrap__our-user-list.our-user-list
+                li.our-user-list__item
+                    img(src="img/users/icon-plus.png" width="38" height="38"  alt="and more")
+                each user, index in users
+                  li.our-user-list__item
+                    img(src=`img/users/${user}.png` width="38" height="38" alt="user image")
+              p.users-wrap__subtext 45k+ Regular User.
+                a(href="").users-wrap__text-link.main-text-colored  View Price Plan
