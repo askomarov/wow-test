@@ -14,13 +14,4 @@
 - Запуск тестирования на соответствия код-гайдам - `npm test`
 
 ## All development is carried out in the directory `source`
-
-## The resulting code gets into the directory `build`
-
-<!--переводчик  -->
-<!-- alt + t  -->
-привет
-Hey
-<!-- оберуть в тег -->
-<!-- alt + w   -->
-<span>Hello</span>
+![2022-09-10_21-47](https://user-images.githubusercontent.com/63908568/189500230-9086abc5-24c8-45df-a6a1-67b2f2580063.png)
